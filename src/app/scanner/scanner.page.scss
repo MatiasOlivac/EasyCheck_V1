@@ -1,0 +1,32 @@
+/* Estilos para el título */
+ion-title {
+    font-size: 24px; /* Tamaño de fuente del título */
+  }
+  
+  /* Estilos para el video */
+  #videoElement {
+    width: 50%;
+    max-width: 60%;
+    margin: 0 auto;
+    display: block;
+    border: 1px solid #ccc; /* Agregar un borde para dar un efecto de relieve */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Agregar una sombra */
+  }
+
+  .bold-text {
+    font-weight: bold;
+  }
+  
+  /* Estilos para el contenedor del código QR escaneado */
+  div {
+    text-align: center; /* Centrar el contenido */
+    padding: 20px; /* Espaciado alrededor del contenido */
+  }
+  
+  /* Estilos para el botón */
+  ion-button {
+    width: 100%; /* Hacer que el botón ocupe todo el ancho disponible */
+    max-width: 300px; /* Establecer un ancho máximo */
+    margin: 20px auto; /* Centrar el botón horizontalmente con margen superior e inferior */
+  }
+  

@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-title>Bienvenid@</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding dark-mode">
+  <div class="flex">
+
+    <div class="img-flex">
+      <img src="../../assets/imagenes/registro.svg" />
+    </div>
+    <div>
+
+      <ion-item fill="outline">
+        <ion-label position="floating">Correo Electrónico</ion-label>
+        <!-- Vincula el valor del ion-input con la propiedad 'email' del componente -->
+        <ion-input [(ngModel)]="email" type="email"></ion-input>
+      </ion-item>
+      <div class="margin"></div>
+      <!-- Vincula el valor del ion-input con la propiedad 'password' del componente -->
+      <ion-item fill="outline">
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input [(ngModel)]="password" type="password"></ion-input>
+      </ion-item>
+      <!-- Muestra el mensaje de contraseña incorrecta -->
+      <p *ngIf="incorrectPassword" class="incorrect-password">Contraseña incorrecta</p>
+      <!-- Muestra el mensaje de "Por favor, rellena todos los campos"  -->
+      <p *ngIf="fieldsEmpty" class="empty-fields">Por favor, rellena todos los campos</p>
+      <p *ngIf="verificationMessage" class="verification-message">
+        <ion-icon name="checkmark-circle-outline"></ion-icon>
+        {{ verificationMessage }}
+      </p>
+      <div class="margin"></div>
+
+      <ion-button class="btn-login" (click)="login()" color="success">INICIAR SESIÓN</ion-button>
+      <ion-button routerLink="/register">REGISTRATE</ion-button>
+    </div>
+    <!-- Perdiste la Contraseña -->
+
+    <ion-footer>
+      <ion-toolbar color="warning">
+        <p><a routerLink="/olvide">¿Recuperar contraseña?</a></p>
+         
+      </ion-toolbar>
+    </ion-footer>
+    
+    
+  </div>
+</ion-content>

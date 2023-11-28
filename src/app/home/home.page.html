@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-button (click)="navigateLeft()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Bienvenido {{ usernameFromLocalStorage }}
+    </ion-title>
+    <ion-buttons slot="end"> 
+      <ion-button (click)="navigateRight()">
+        <ion-icon name="arrow-forward"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <!-- Agrega un mensaje con estilo responsivo -->
+    
+    
+    <ion-button expand="full" routerLink="/scanner" color="success">SCANEAR CODIGO QR</ion-button>
+
+    <img src="assets/imagenes/code.svg" alt="QR Ejemplo" class="responsive-image" />
+  </div>
+</ion-content>
